@@ -3,216 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voting Guru - PKBM MELATI</title>
-
+<title>Hari Guru Nasional 2025 - PKBM MELATI</title>
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#5f2c82,#49a09d);
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 15px;
-}
-
-.header {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.header h1 {
-    margin: 0;
-    color: #5f2c82;
-}
-
-.header h2 {
-    margin: 5px 0 0;
-    color: #49a09d;
-}
-
-.section {
-    margin-top: 20px;
-    background: white;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.section-title {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap: 15px;
-}
-
-.card {
-    background: linear-gradient(145deg,#6a11cb,#2575fc);
-    color: white;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.name {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.vote-btn {
-    background: white;
-    color: #2575fc;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.vote-btn:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-.count {
-    margin-top: 8px;
-    font-weight: bold;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-    opacity: 0.9;
-}
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);margin:0;padding:15px;}
+.container{max-width:1000px;margin:0 auto;}
+.header{background:white;border-radius:15px;padding:25px;text-align:center;margin-bottom:20px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.header h1{color:#667eea;font-size:1.8em;margin-bottom:10px;}
+.header h2{color:#764ba2;font-size:1.4em;margin-bottom:15px;}
+.greeting{background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);color:white;padding:20px;border-radius:10px;font-size:1em;line-height:1.5;}
+.section-title{background:white;color:#667eea;padding:15px;border-radius:10px;text-align:center;font-size:1.5em;margin:20px 0 15px;font-weight:bold;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.voting-section{background:white;border-radius:15px;padding:20px;margin-bottom:20px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.category-title{text-align:center;margin-bottom:15px;font-size:1.5em;font-weight:bold;}
+.male-section{border-top:4px solid #4299e1;}
+.female-section{border-top:4px solid #f093fb;}
+.male-section .category-title{color:#4299e1;}
+.female-section .category-title{color:#f093fb;}
+.teachers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:15px;}
+.teacher-card{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:transform 0.3s;}
+.teacher-card:active{transform:scale(0.95);}
+.teacher-card:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+.teacher-name{color:white;font-size:1.2em;font-weight:bold;margin-bottom:12px;}
+.vote-btn{background:white;color:#667eea;border:none;padding:10px 25px;border-radius:20px;font-size:1em;font-weight:bold;cursor:pointer;width:100%;}
+.footer{background:white;border-radius:12px;padding:20px;text-align:center;margin-top:20px;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.footer p{color:#667eea;font-size:1em;margin:8px 0;}
+@media(max-width:600px){.header h1{font-size:1.4em;}.header h2{font-size:1.1em;}.teachers-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
-
 <div class="container">
-
-<div class="header">
-    <h1>🎓 VOTING GURU TERBAIK</h1>
-    <h2>PKBM MELATI</h2>
-    <p>Pilih satu guru favoritmu 🗳️</p>
-</div>
-
-<div class="section">
-    <div class="section-title">👨‍🏫 Guru Laki-laki</div>
-    <div class="grid">
-
-        <div class="card">
-            <div class="name">PAK YULIUS</div>
-            <button class="vote-btn" onclick="vote('yulius')">VOTE</button>
-            <div class="count" id="yulius">0 Vote</div>
+    <div class="header">
+        <h1>🎓 SELAMAT HARI GURU NASIONAL 2025 🎓</h1>
+        <h2>PKBM MELATI</h2>
+        <div class="greeting">
+            <p><strong>Selamat datang di Website Hari Guru Nasional PKBM Melati! 🌟</strong></p>
+            <p>Terima kasih telah mengunjungi website ini. Mari kita rayakan dedikasi para guru dengan voting Guru Terbaik!</p>
+            <p><strong>Guru adalah pahlawan tanpa tanda jasa. 💖</strong></p>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="name">PAK BOBI</div>
-            <button class="vote-btn" onclick="vote('bobi')">VOTE</button>
-            <div class="count" id="bobi">0 Vote</div>
+    <div class="section-title">🏆 VOTE GURU TERBAIK 2025 🏆</div>
+
+    <div class="voting-section male-section">
+        <div class="category-title">👨‍🏫 KATEGORI GURU LAKI-LAKI</div>
+        <div class="teachers-grid">
+            <div class="teacher-card" onclick="vote('yulius','Pak Yulius')"><div class="teacher-name">👨‍🏫 PAK YULIUS</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('bobi','Pak Bobi')"><div class="teacher-name">👨‍🏫 PAK BOBI</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('rizky','Pak Rizky')"><div class="teacher-name">👨‍🏫 PAK RIZKY</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('supra','Pak Supra')"><div class="teacher-name">👨‍🏫 PAK SUPRA</div><button class="vote-btn">VOTE</button></div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="name">PAK RIZKY</div>
-            <button class="vote-btn" onclick="vote('rizky')">VOTE</button>
-            <div class="count" id="rizky">0 Vote</div>
+    <div class="voting-section female-section">
+        <div class="category-title">👩‍🏫 KATEGORI GURU PEREMPUAN</div>
+        <div class="teachers-grid">
+            <div class="teacher-card" onclick="vote('suzana','Ibu Suzana')"><div class="teacher-name">👩‍🏫 IBU SUZANA</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('nani','Ibu Nani')"><div class="teacher-name">👩‍🏫 IBU NANI</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('yakazi','Ibu Yakazi')"><div class="teacher-name">👩‍🏫 IBU YAKAZI</div><button class="vote-btn">VOTE</button></div>
+            <div class="teacher-card" onclick="vote('rtuki','Ibu Rtuki')"><div class="teacher-name">👩‍🏫 IBU RTUKI</div><button class="vote-btn">VOTE</button></div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="name">PAK SUPRA</div>
-            <button class="vote-btn" onclick="vote('supra')">VOTE</button>
-            <div class="count" id="supra">0 Vote</div>
-        </div>
-
+    <div class="footer">
+        <p><strong>💻 Website Created by: Ilham</strong></p>
+        <p>🏫 PKBM MELATI - Hari Guru Nasional 2025</p>
+        <p>❤️ Terima kasih untuk semua guru yang telah mendedikasikan hidupnya untuk pendidikan</p>
     </div>
 </div>
 
-<div class="section">
-    <div class="section-title">👩‍🏫 Guru Perempuan</div>
-    <div class="grid">
-
-        <div class="card">
-            <div class="name">IBU SUZANA</div>
-            <button class="vote-btn" onclick="vote('suzana')">VOTE</button>
-            <div class="count" id="suzana">0 Vote</div>
-        </div>
-
-        <div class="card">
-            <div class="name">IBU NANI</div>
-            <button class="vote-btn" onclick="vote('nani')">VOTE</button>
-            <div class="count" id="nani">0 Vote</div>
-        </div>
-
-        <div class="card">
-            <div class="name">IBU YAKAZI</div>
-            <button class="vote-btn" onclick="vote('yakazi')">VOTE</button>
-            <div class="count" id="yakazi">0 Vote</div>
-        </div>
-
-        <div class="card">
-            <div class="name">IBU RTUKI</div>
-            <button class="vote-btn" onclick="vote('rtuki')">VOTE</button>
-            <div class="count" id="rtuki">0 Vote</div>
-        </div>
-
-    </div>
-</div>
-
-<div class="footer">
-    <p>💻 Website by Ilham</p>
-    <p>🏫 PKBM MELATI</p>
-</div>
-
-</div>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script>
-let votes = JSON.parse(localStorage.getItem("votes")) || {
-    yulius:0,bobi:0,rizky:0,supra:0,
-    suzana:0,nani:0,yakazi:0,rtuki:0
+// Ganti dengan config Firebase kamu
+const firebaseConfig = {
+  apiKey: "API_KEY_BARU",
+  authDomain: "PROJECT_ID_BARU.firebaseapp.com",
+  projectId: "PROJECT_ID_BARU",
+  storageBucket: "PROJECT_ID_BARU.appspot.com",
+  messagingSenderId: "SENDER_ID_BARU",
+  appId: "APP_ID_BARU"
 };
 
-let hasVoted = localStorage.getItem("hasVoted");
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-function render(){
-    for(let k in votes){
-        document.getElementById(k).innerText = votes[k] + " Vote";
-    }
-    if(hasVoted){
-        document.querySelectorAll('.vote-btn').forEach(btn=>btn.disabled=true);
-    }
+// Telegram info (testing, sebaiknya pakai Cloud Function untuk production)
+const TELEGRAM_BOT_TOKEN = "8075129453:AAHb75QqznKgmLTtDgThmP6pJveTphSRmKo";
+const TELEGRAM_CHAT_ID = "8116752882";
+
+function sendTelegram(message){
+    axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,{
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message
+    }).catch(err=>console.error("Telegram error:",err));
 }
 
-function vote(name){
-    if(hasVoted) return alert("Anda sudah melakukan vote ✅");
-    votes[name]++;
-    localStorage.setItem("votes", JSON.stringify(votes));
-    localStorage.setItem("hasVoted","true");
-    hasVoted = true;
-    render();
-    alert("✅ Vote berhasil!");
+function vote(guruId,guruName){
+    const docRef=db.collection('votes').doc(guruId);
+    db.runTransaction(async transaction=>{
+        const doc=await transaction.get(docRef);
+        let newCount = 1;
+        if(doc.exists) newCount = doc.data().count + 1;
+        transaction.set(docRef,{name:guruName,count:newCount});
+        sendTelegram(`🎉 Vote baru untuk ${guruName}: ${newCount} vote!`);
+    }).then(()=>{
+        alert('✨ Terima kasih! Vote Anda untuk '+guruName+' telah tercatat! ✨');
+    }).catch(err=>{console.error("Vote gagal:",err);});
 }
-
-render();
 </script>
-
 </body>
 </html>
